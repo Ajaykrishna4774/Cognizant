@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<body background="" >
+<title>EMPLOYEE FORM</title>
+</head>
+<body bgcolor="lavender" >
+<div id="result"></div>
+</style>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("Employee Name", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("Employee Name");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+<form>
+Employee Name: <input type="text" name="name"><br>
+Employee MailId:<input type="text" name="mail"><br>
+Employee Gender:<input type="radio" name="gender" value="male" checked> Male
+  &nbsp<input type="radio" name="gender" value="female"> Female
+  <input type="radio" name="gender" value="other"> Others<br>
+Employee Location:
+<select name="Chennai">
+  <option value="Hyderabad"></option>
+  <option value="bangalor">bangalor</option>
+  <option value="mumbai">mumbai</option>
+  <option value="kolkata">kolkata</option>
+</select><br>
+Area:
+<textarea ></textarea><br>
+<br>Employee Contact:
+<input type="text" name="name">
+<br>
+</form>
+<button type="submit" form="form1" value="Submit">Submit</button>
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+<br>
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+</body>
+
+</html>
